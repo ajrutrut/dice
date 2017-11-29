@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script type = "text/javascript">
+function rolldice() {
+
+	var dieOne = document.getElementById("dieOne");
+	var dieTwo = document.getElementById("dieTwo");   //get elements
+	var output = document.getElementById("output"); 
+
+	var x = Math.floor(Math.random() * 6) + 1 ;  // random number  1-6
+	var y = Math.floor(Math.random() * 6) + 1 ; 
+	var dicetotal = x + y;
+	
+	dieOne.innerHTML = x; 
+	dieTwo.innerHTML = y;		// connects elements to math
+	output.innerHTML = "You rolled" + " " + dicetotal + ".";
+
+if(x == y) {
+	output.innerHTML = "You have Doubles:" + " " + dicetotal + ".";
+}
+	
+}
+
+</script>
+</head>
+
+<body>
+<div id = "dieOne">0</div>
+<div id = "dieTwo">0</div>
+<button onClick = "rolldice()">roll</button>
+<h2 id = "output"></h2>
+
+<style>
+#dieOne {
+	
+height: 50px;
+width: 50px;
+font-size: 40px;
+border: 2px solid black;
+position: relative;
+display: block;
+float: left;
+text-align: center;
+}
+
+#dieTwo {
+	
+height: 50px;
+width: 50px;
+font-size: 40px;
+border: 2px solid black;
+position: relative;
+display: block;
+margin-left: 60px;
+text-align: center;
+}
+#bOne {
+
+	height: 50px;
+	width: 80px;
+}
+</style>
+
+
+</body>
+
+</html>
